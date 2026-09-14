@@ -4,14 +4,16 @@
   "features": {
     "ghcr.io/devcontainers/features/node:1": {}
   },
+  "remoteEnv": {
+    "PATH": "${containerEnv:HOME}/.opencode/bin:${containerEnv:PATH}"
+  },
   "postCreateCommand": "curl -fsSL https://opencode.ai/install | bash",
-  "forwardPorts": [
-    4096
-  ],
+  "postAttachCommand": "bash -lc 'pgrep -f \"opencode web\" >/dev/null 2>&1 || (nohup opencode web --hostname 0.0.0.0 --port 4096 > /tmp/opencode-web.log 2>&1 &)'",
+  "forwardPorts": [4096],
   "portsAttributes": {
     "4096": {
       "label": "opencode web",
-      "onAutoForward": "silent"
+      "onAutoForward": "openBrowserOnce"
     }
   }
 }
