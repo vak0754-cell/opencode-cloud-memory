@@ -1,6 +1,14 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "share": "auto",
+  "small_model": "openrouter-free/liquid/lfm-2.5-2.6b:free",
+  "references": {
+    "cloud-memory": {
+      "repository": "github.com/vak0754-cell/opencode-cloud-memory",
+      "branch": "main",
+      "description": "Хмарна пам’ять і конфіг opencode (спільні для ПК і телефона)"
+    }
+  },
   "provider": {
     "openrouter-top": {
       "name": "OpenRouter — найпотужніші безкоштовні",
