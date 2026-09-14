@@ -1,0 +1,17 @@
+{
+  "name": "opencode-cloud",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
+  "postCreateCommand": "curl -fsSL https://opencode.ai/install | bash",
+  "forwardPorts": [
+    4096
+  ],
+  "portsAttributes": {
+    "4096": {
+      "label": "opencode web",
+      "onAutoForward": "silent"
+    }
+  }
+}
