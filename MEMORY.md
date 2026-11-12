@@ -1,7 +1,24 @@
-# Cloud Memory (opencode)
+# Хмарна пам'ять OpenCode
 
-Хмарна пам'ять між чатами. Файл зберігається в GitHub і доступний opencode через `references` як `cloud-memory`.
+Стислий опис поточного налаштування. Сесії: `C:/Users/Roma/OpenCode-Workspace`.
 
-## Нотатки
-- Моделі: openrouter-top (★ найпотужніші), openrouter-free (усі безкоштовні)
-- Режим: повністю хмарний (share: auto + GitHub repo)
+## Моделі
+- Основна: `myy/deepseek-v4-pro`
+- Мала / швидка: `deepseek-flash/deepseek-flash`
+
+## MCP
+- `context7` — увімкнено (`https://mcp.context7.com/mcp`)
+- `grep-app` — увімкнено (`https://mcp.grep.app`)
+- `browser-control` — вимкнено
+
+## Команди та агенти
+- Команди: `/review`, `/commit`, `/explain`, `/duo`, `/pharmacy`
+- Агент: `reviewer`
+
+## Синхронізація
+- `sync-from-cloud.ps1` підставляє `model` / `small_model` і провайдерів лише якщо їх немає локально; наявні не перезаписує.
+
+## Правила
+- `snapshot`: false
+- `lsp`: false
+- `logLevel`: ERROR
